@@ -37,6 +37,7 @@ public class FruitActivity extends AppCompatActivity {
 //        binding.toolbar.setNavigationIcon(R.drawable.ic_back); //设置一个返回按钮
 //        binding.toolbar.setNavigationOnClickListener(v -> finish());
         binding.collapsingToolbar.setTitle(fruitName); //将水果名设置成当前界面的标题
+        binding.collapsingToolbar.setCollapsedTitleTextColor(getResources().getColor(R.color.white));
         Glide.with(this).load(fruitImageId).into(binding.fruitImageView); //使用Glide加载传入的水果图片
         String fruitContent = generateFruitContent(fruitName);
         binding.fruitContentText.setText(fruitContent);
